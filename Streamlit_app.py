@@ -61,6 +61,6 @@ if st.button("Predict Churn"):
 
     # Display results
     if pred == 1:
-        st.error(f"Prediction: CHURN \n (Probability: {prob_churn:.4f})" if prob_churn is not None else "Prediction: **CHURN**")
+        st.error(f"Prediction: Churn \n (Probability: {prob_churn:.4f})" if prob_churn is not None else "Prediction: Churn")
     else:
-        st.success(f"Prediction: STAY\n (Probability: {1 - prob_churn:.4f})" if prob_churn is not None else "Prediction: **STAY**")
+        st.success(f"Prediction: Stay\n (Probability: {1 - prob_churn:.4f})" if prob_churn is not None else "Prediction: Stay")
