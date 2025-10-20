@@ -12,9 +12,6 @@ le_gender = joblib.load('le_gender.pkl')
 le_sub = joblib.load('le_subscription.pkl')
 le_contract = joblib.load('le_contract.pkl')
 
-st.title("Welcome To")
-st.markdown("### Customer Churn Prediction App")
-
 st.write("Model will Predict (Churn=1, Stay=0).")
 
 # --- Input fields (match your training columns)
@@ -64,6 +61,6 @@ if st.button("Predict Churn"):
 
     # Display results
     if pred == 1:
-        st.error(f"Prediction: **CHURN** (Probability: {prob_churn:.4f})" if prob_churn is not None else "Prediction: **CHURN**")
+        st.error(f"Prediction: CHURN \n (Probability: {prob_churn:.4f})" if prob_churn is not None else "Prediction: **CHURN**")
     else:
-        st.success(f"Prediction: **STAY** (Probability: {1 - prob_churn:.4f})" if prob_churn is not None else "Prediction: **STAY**")
+        st.success(f"Prediction: STAY\n (Probability: {1 - prob_churn:.4f})" if prob_churn is not None else "Prediction: **STAY**")
