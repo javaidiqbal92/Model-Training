@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 
-st.set_page_config(page_title="Customer Churn Predictor App", layout="centered")
+st.set_page_config(page_title="Customer Churn Predictor", layout="centered")
 
 # Load artifacts
 model = joblib.load('best_churn_model.pkl')
@@ -12,7 +12,7 @@ le_gender = joblib.load('le_gender.pkl')
 le_sub = joblib.load('le_subscription.pkl')
 le_contract = joblib.load('le_contract.pkl')
 
-st.write("Churn Predictor.")
+st.title("Churn Predictor App")
 
 # --- Input fields (match your training columns)
 # Get numeric range suggestions from your data if you want; here are generic inputs:
