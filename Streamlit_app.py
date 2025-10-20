@@ -12,7 +12,7 @@ le_gender = joblib.load('le_gender.pkl')
 le_sub = joblib.load('le_subscription.pkl')
 le_contract = joblib.load('le_contract.pkl')
 
-st.write("Model will Predict (Churn=1, Stay=0).")
+st.write("Churn Predictor.")
 
 # --- Input fields (match your training columns)
 # Get numeric range suggestions from your data if you want; here are generic inputs:
@@ -61,6 +61,7 @@ if st.button("Predict"):
 
     # Display results
     if pred == 1:
-        st.error(f"Prediction: Churn (Probability:  {prob_churn:.4f})" if prob_churn is not None else "Prediction: Churn")
+        st.error(f"Prediction: Churn )" if prob_churn is not None else "Prediction: Churn")
+        st.write(f"(Probability:  {prob_churn:.4f}")
     else:
         st.success(f"Prediction: Stay (Probability:  {1 - prob_churn:.4f})" if prob_churn is not None else "Prediction: Stay")
