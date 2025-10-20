@@ -62,7 +62,7 @@ if st.button("Predict"):
     # Display results
     if pred == 1:
         st.error(f"Prediction: Churn )" if prob_churn is not None else "Prediction: Churn")
-        st.write(f"(Probability:  {prob_churn:.4f}")
+        st.write(f"Probability:  {prob_churn:.4f}"
     else:
         st.success(f"Prediction: Stay " if prob_churn is not None else "Prediction: Stay")
-        st.write(f"(Probability:  {1 - prob_churn:.4f})")
+        st.write(f"Probability:  {1 - prob_churn:.4f}")
